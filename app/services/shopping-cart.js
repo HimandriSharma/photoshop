@@ -28,7 +28,8 @@ export default class ShoppingCartService extends Service {
       this.itemList = [
         ...this.itemList,
         new Item({
-        ...item, count: 1 ,
+          ...item,
+          count: 1,
         }),
       ];
     }
