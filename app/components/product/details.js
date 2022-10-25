@@ -1,7 +1,17 @@
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
-import { action } from '@ember/action';
+import { action } from '@ember/object';
 
 export default class ProductDetailsComponent extends Component {
-  @service('shoping-cart') cart;
+  @service('shopping-cart') cart;
+
+  @action
+  addToCart() {
+    const { name, price, colors } = this.args;
+    this.cart.addItem({
+      name,
+      image: colors[0].image,
+      price: price.current,
+    });
+  }
 }

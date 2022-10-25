@@ -17,8 +17,10 @@
     <del class='small text-black-50'>{{currency @price.original}}</del>
     <i class='text-danger font-weight-bold'>{{currency @price.current}}</i>
   </section>
-  <button class='btn btn-info' type='button' {{on 'click' this.addToCart}}>
-    <i class='fa fa-shopping-cart mr-1'></i>
-    Add to cart
-  </button>
+  {{#if @isDetails}}
+    <button class='btn btn-info' type='button' {{on 'click' this.addToCart}}>
+      <i class='fa fa-shopping-cart mr-1'></i>
+      Add to cart
+    </button>
+  {{/if}}
 </div>
