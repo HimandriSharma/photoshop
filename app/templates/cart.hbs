@@ -23,6 +23,13 @@
         value={{item.count}}
         {{on 'input' (fn this.updateItemCount item)}}
       />
+      <button
+        type='button'
+        class='btn btn-danger float-right ml-3'
+        {{on 'click' (fn this.removeItem item)}}
+      >
+         <i class='fa fa-trash'></i>
+      </button>
     </div>
   {{/each}}
   <section class='w-50 ml-auto text-right mb-5'>
