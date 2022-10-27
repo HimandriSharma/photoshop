@@ -5,12 +5,13 @@ export default class ItemRoute extends Route {
   @service store;
   async model(params) {
     const { item_id } = params;
-    const data = await this.store.findAll('product');
+    const data = await this.store.findAll('list');
+    // console.log(data.find(({ id }) => id === item_id))
     const product = data.find(({ id }) => id === item_id);
     return product;
   }
   setupController(controller, model) {
     super.setupController(controller, model);
-    controller.color = model.colors[0].color;
+    // controller.color = model.colors[0].color;
   }
 }

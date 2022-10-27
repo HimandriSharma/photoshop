@@ -2,23 +2,16 @@
 
   {{! Header }}
   <section>
-    <h3>{{@name}}</h3>
-    <div class='text-warning'>
-      <i class='fa fa-star'></i>
-      <i class='fa fa-star'></i>
-      <i class='fa fa-star'></i>
-      <i class='fa fa-star'></i>
-      <i class='fa fa-star-half-o'></i>
-    </div>
+    <h3><i>Author:</i> <br/>{{@author}}</h3>
   </section>
 
   {{! Price }}
-  <section class='h4'>
+  {{!-- <section class='h4'>
     <del class='small text-black-50'>{{currency @price.original}}</del>
     <i class='text-danger font-weight-bold'>{{currency @price.current}}</i>
-  </section>
+  </section> --}}
   {{#if @isDetails}}
-    <button class='btn btn-info' type='button' {{on 'click' this.addToCart}}>
+    <button class='btn btn-info' type='button' {{on 'click' this.addToCart }}>
       <i class='fa fa-shopping-cart mr-1'></i>
       Add to cart
     </button>

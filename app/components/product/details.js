@@ -7,11 +7,18 @@ export default class ProductDetailsComponent extends Component {
 
   @action
   addToCart() {
-    const { name, price, colors } = this.args;
+    // const { name, price, colors } = this.args;
+    // this.cart.addItem({
+    //   name,
+    //   image: colors[0].image,
+    //   price: price.current,
+    // });
+    const { author, download_url } = this.args;
+    console.log(this.args)
     this.cart.addItem({
-      name,
-      image: colors[0].image,
-      price: price.current,
+      author,
+      image: download_url,
+      // price: price.current,
     });
   }
 }

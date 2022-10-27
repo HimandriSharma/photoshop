@@ -1,6 +1,8 @@
 <GeneralContainer>
-  {{#each this.model as |product|}}
-    <Product @product={{product}} />
+  {{#each this.model as |photo|}}
+    <Product @product={{photo}} />
+    {{!-- <h3>{{photo.author}}</h3>
+    <p>{{photo.width}}{{photo.height}}{{photo.download_url}}</p> --}}
   {{/each}}
 </GeneralContainer>
 {{!-- <GeneralContainer>
