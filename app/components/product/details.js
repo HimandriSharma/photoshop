@@ -13,11 +13,10 @@ export default class ProductDetailsComponent extends Component {
     //   image: colors[0].image,
     //   price: price.current,
     // });
-    const { author, download_url } = this.args;
-    console.log(this.args)
+    const { author, image } = this.args;
     this.cart.addItem({
       author,
-      image: download_url,
+      image: image,
       // price: price.current,
     });
   }
