@@ -33,3 +33,14 @@
     width: 20px;
   }
 }
+.grid { 
+  // border: 1px solid gray; 
+}
+.row { overflow: auto; }
+
+.cell {
+    width: 20%;
+    float: left;
+    // border: 1px solid gray;
+    // padding: 1em;
+}

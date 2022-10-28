@@ -1,7 +1,7 @@
 .product-image {
   background: linear-gradient(to top, #2193b0, #6dd5ed);
   height: 100%;
-  width: 40%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@
 }
 
 .product {
-  width: 500px;
+  width: 300px;
   height: 240px;
   margin: 0 auto 50px;
   display: flex;

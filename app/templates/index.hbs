@@ -1,12 +1,11 @@
 <GeneralContainer>
-  {{#each this.model as |photo|}}
-    <Product @product={{photo}} />
-    {{!-- <h3>{{photo.author}}</h3>
-    <p>{{photo.width}}{{photo.height}}{{photo.download_url}}</p> --}}
-  {{/each}}
+  <div class='grid'>
+    {{#each this.model as |grid|}}
+      <div class='row'>
+        {{#each grid as |product|}}
+          <Product @product={{product}} />
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
 </GeneralContainer>
-{{!-- <GeneralContainer>
-  {{#each this.model as |list|}}
-    <Product @product={{list}} />
-  {{/each}}
-</GeneralContainer> --}}
