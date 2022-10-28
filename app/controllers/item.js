@@ -4,6 +4,7 @@ import { action } from '@ember/object';
 
 export default class ItemController extends Controller {
   @tracked isZoomed = false;
+  
   get productImage() {
     return this.model.download_url;
   }
