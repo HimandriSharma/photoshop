@@ -7,8 +7,14 @@
 
   {{! Price }}
   <section class='h4'>
-    {{#if this.isSmall}}
+    {{#if (eq this.size "small")}}
     <i class='text-danger font-weight-bold'>{{currency 10}}</i>
+    {{else if (eq this.size "medium")}}
+    <i class='text-danger font-weight-bold'>{{currency 20}}</i>
+    {{else if (eq this.size "large")}}
+    <i class='text-danger font-weight-bold'>{{currency 30}}</i>
+    {{else if (eq this.size "xlarge")}}
+    <i class='text-danger font-weight-bold'>{{currency 40}}</i>
     {{/if}}
   </section>
   {{#if @isDetails}}

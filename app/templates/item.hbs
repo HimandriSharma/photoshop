@@ -8,7 +8,7 @@
       @isDetails={{true}}
       @author={{this.model.author}}
       @image={{this.model.download_url}}
-      @price=10
+      {{!-- @price=10 --}}
       {{!-- @price={{this.model.price}}
       @colors={{this.model.colors}} --}}
     />
@@ -16,5 +16,5 @@
   <h5 class='mt-5'>Dimensions (Height X Width)</h5>
   <h6>{{this.model.height}} X {{this.model.width}}</h6>
   <h5>Download URL</h5>
-  <a href={{this.model.download_url}} target="_blank">{{this.model.download_url}}</a>
+  <a href={{this.model.download_url}} target="_blank" rel="noopener noreferrer">{{this.model.download_url}}</a>
 </GeneralContainer>

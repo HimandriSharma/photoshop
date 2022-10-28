@@ -7,7 +7,18 @@ export default class CartController extends Controller {
 
   get subtotal() {
     return this.cart.itemList.reduce((acc, item) => {
-      return acc + item.price * item.count;
+      if(item.size==="small"){
+        return acc + 10 * item.count;
+      }
+      else if(item.size==="medium"){
+        return acc + 20 * item.count;
+      }
+      else if(item.size==="large"){
+        return acc + 30 * item.count;
+      }
+      else if(item.size==="xlarge"){
+        return acc + 40 * item.count;
+      }
     }, 0);
   }
   get tax() {

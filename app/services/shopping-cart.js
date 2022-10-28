@@ -19,11 +19,11 @@ class Item {
     this.height = item.height;
     this.size = item.size;
     this.price = {
-      "small": 10,
-      "medium": 20,
-      "large": 30,
-      "xlarge": 40
-    }
+      small: 10,
+      medium: 20,
+      large: 30,
+      xlarge: 40,
+    };
   }
 }
 
@@ -31,7 +31,9 @@ export default class ShoppingCartService extends Service {
   @tracked itemList = [];
   addItem(item) {
     const existingItem = this.itemList.find(({ author, image, size }) => {
-      return author === item.author && image === item.image && item.size === size;
+      return (
+        author === item.author && image === item.image && item.size === size
+      );
     });
 
     if (existingItem) {

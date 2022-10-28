@@ -14,8 +14,16 @@
         <img src={{item.image}} alt='' />
       </div>
       <div class='ml-3'>
-        <h4>{{item.name}}</h4>
-        <i class='font-weight-bold'>{{currency item.price}}</i>
+        <h4>Size: {{item.size}}</h4>
+        {{#if (eq item.size 'small')}}
+          <i class='text-danger font-weight-bold'>{{currency 10}}</i>
+        {{else if (eq item.size 'medium')}}
+          <i class='text-danger font-weight-bold'>{{currency 20}}</i>
+        {{else if (eq item.size 'large')}}
+          <i class='text-danger font-weight-bold'>{{currency 30}}</i>
+        {{else if (eq item.size 'xlarge')}}
+          <i class='text-danger font-weight-bold'>{{currency 40}}</i>
+        {{/if}}
       </div>
       <input
         type='number'
@@ -28,7 +36,7 @@
         class='btn btn-danger float-right ml-3'
         {{on 'click' (fn this.removeItem item)}}
       >
-         <i class='fa fa-trash'></i>
+        <i class='fa fa-trash'></i>
       </button>
     </div>
   {{/each}}
