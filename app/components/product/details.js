@@ -19,9 +19,4 @@ export default class ProductDetailsComponent extends Component {
   setSize(val) {
     this.size = val.target.value;
   }
-  @action
-  isSmall() {
-    console.log(this.size === 'small');
-    return this.size === 'small';
-  }
 }

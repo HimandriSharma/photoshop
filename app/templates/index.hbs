@@ -1,4 +1,7 @@
 <GeneralContainer>
+  <button class='btn btn-info' type='button' {{on 'click' this.nextPage}}>
+    Increase
+  </button>
   <div class='grid'>
     {{#each this.model as |grid|}}
       <div class='row'>
