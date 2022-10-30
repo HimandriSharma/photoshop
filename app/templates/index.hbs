@@ -1,7 +1,25 @@
 <GeneralContainer>
-  <button class='btn btn-info' type='button' {{on 'click' this.nextPage}}>
-    Increase
-  </button>
+  <div class='d-flex w-100 align-items-center p-3'>
+    <LinkTo @route='index' @model={{this.page.pageNumber}}>
+      <button
+        class='btn btn-default'
+        type='button'
+        {{on 'click' this.previousPage}}
+      >
+        <i class="fa fa-angle-double-left"></i>
+      </button>
+    </LinkTo>
+    <div class='p-3 font-weight-bold'>{{this.page.pageNumber}}</div>
+    <LinkTo @route='index' @model={{this.page.pageNumber}}>
+      <button
+        class='btn btn-default'
+        type='button'
+        {{on 'click' this.nextPage}}
+      >
+         <i class="fa fa-angle-double-right"></i>
+      </button>
+    </LinkTo>
+  </div>
   <div class='grid'>
     {{#each this.model as |grid|}}
       <div class='row'>

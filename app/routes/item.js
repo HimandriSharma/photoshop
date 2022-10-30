@@ -7,8 +7,6 @@ export default class ItemRoute extends Route {
   @service('pages') page;
   async model(params) {
     const { item_id } = params;
-    // const data = await this.store.findAll('list');
-    // const product = data.find(({ id }) => id === item_id);
     const response = await fetch(
       `https://picsum.photos/v2/list?page=${this.page.pageNumber}&limit=25`
     );

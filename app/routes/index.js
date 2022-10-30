@@ -22,15 +22,13 @@ export default class IndexRoute extends Route {
   }
 
   @action
-  async model(params) {
-    console.log(params)
+  async model(params = 1) {
+    this.page.pageNumber = parseInt(params.page_no);
     const response = await fetch(
-      `https://picsum.photos/v2/list?page=${this.page.pageNumber}&limit=25`
+      `https://picsum.photos/v2/list?page=${params.page_no}&limit=25`
     );
     const m = await response.json();
-    // const d = await this.store.findAll('list');
     const res = this.transform(m);
     return res;
   }
-  
 }

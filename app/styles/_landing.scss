@@ -1,0 +1,14 @@
+.landing_page{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://picsum.photos/id/1019/5472/3648');
+    color: white;
+    font-weight: bolder;
+}
+.heading{
+    font-size: 60px;
+}
