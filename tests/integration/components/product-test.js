@@ -9,18 +9,17 @@ module('Integration | Component | product', function (hooks) {
   test('it renders', async function (assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Product />`);
+    this.set('product', {
+      id: '118',
+      author: 'Rick Waalders',
+      width: 1500,
+      height: 1000,
+      url: 'https://unsplash.com/photos/d-Cr8MEW5Uc',
+      download_url: 'https://picsum.photos/id/118/1500/1000',
+    });
+    await render(hbs`<Product  @product={{this.product}}/>`);
+    // await this.pauseTest();
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Product>
-        template block text
-      </Product>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });

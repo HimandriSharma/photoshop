@@ -8,7 +8,7 @@
   {{! Price }}
   <section class='h4'>
     {{#if (eq this.size "small")}}
-    <i class='text-danger font-weight-bold'>{{currency 10}}</i>
+    <i data-test-price class='text-danger font-weight-bold'>{{currency 10}}</i>
     {{else if (eq this.size "medium")}}
     <i class='text-danger font-weight-bold'>{{currency 20}}</i>
     {{else if (eq this.size "large")}}

@@ -9,4 +9,8 @@ module('Unit | Service | pages', function (hooks) {
     let service = this.owner.lookup('service:pages');
     assert.ok(service);
   });
+  test('page number value test', function (assert) {
+    let service = this.owner.lookup('service:pages');
+    assert.equal(service.pageNumber,1,'pageNumber is equal to 1');
+  });
 });
